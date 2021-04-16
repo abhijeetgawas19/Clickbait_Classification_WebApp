@@ -1,0 +1,45 @@
+.Website-Title {
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: "Proza Libre", sans-serif;
+  /*z-index: 1;*/
+}
+.Main-Page {
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  font-family: "Montserrat", sans-serif;
+}
+
+a:hover {
+  color: whitesmoke;
+}
+
+div.form-blocks {
+  border: 1px solid whitesmoke;
+  border-radius: 15px;
+  padding: 25px;
+  margin-top: 60px;
+  width: 450px;
+  background-color: white;
+}
+
+.btn {
+  margin-top: 10px;
+  margin-left: 150px;
+}
+
+div.result-blocks {
+  border-radius: 15px;
+  margin-top: 25px;
+  padding: 25px;
+  width: 250px;
+  background-color: white;
+}
+
+div.card {
+  width: 200px;
+  height: 200px;
+}
+
+textarea.textArea {
+  resize: none;
+}
