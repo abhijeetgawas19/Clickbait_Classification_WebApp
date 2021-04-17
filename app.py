@@ -25,9 +25,9 @@ def predict(): # Web API
         pred = model.predict(vect)
     pred = pred[0]
     if(pred==0):
-        return render_template('index.html',prediction_text="Clickbait")
-    else:
         return render_template('index.html',prediction_text="No Clickbait")
+    else:
+        return render_template('index.html',prediction_text="Clickbait")
 
 if __name__ == "__main__":
     app.run(debug=True)
