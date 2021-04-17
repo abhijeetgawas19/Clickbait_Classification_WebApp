@@ -4,6 +4,7 @@ import pandas as pd
 import nltk
 import re
 import string
+import nltk
 # Library for Splitting Data into Training and Testing
 from sklearn.model_selection import train_test_split
 # Library for converting text into vectors
@@ -71,7 +72,6 @@ data.head()
 
 # Lemmatization
 
-import nltk
 nltk.download('wordnet')
 
 wn = nltk.WordNetLemmatizer()
