@@ -3,23 +3,23 @@ import pickle
 
 
 
-model = pickle.load(open("NavieBayesModel.pkl","rb"))
-cv = pickle.load(open("vectorizer.pkl","rb"))
+model = pickle.load(open('NavieBayesModel.pkl','rb'))
+cv = pickle.load(open('vectorizer.pkl','rb'))
 app = Flask(__name__,template_folder='template') # Creation of Flask Application
 
-text =" "
+text =' '
 
-@app.route("/") # This is Home Page  # Root Page /
+@app.route('/') # This is Home Page  # Root Page /
 def home():
-    return render_template("index.html")
+    return render_template('index.html')
 
 @app.route('/predict',methods=['POST']) # Providing Features as input to model and providing output
 def predict(): # Web API
     '''
     For Rendering Results from on HTML GUI
     '''
-    if request.method == "POST":
-        msg = request.form["message"]
+    if request.method == 'POST':
+        msg = request.form['message']
         data = [msg]
         vect = cv.transform(data).toarray()
         pred = model.predict(vect)
@@ -29,5 +29,5 @@ def predict(): # Web API
     else:
         return render_template('index.html',prediction_text="Clickbait")
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)
