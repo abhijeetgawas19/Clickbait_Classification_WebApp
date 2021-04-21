@@ -30,28 +30,40 @@
   <body class="Main-Page">
     <!-- Navigation Bar -->
     <nav class="navbar navbar-dark bg-dark">
-      <h2>
-        <a class="Website-Title" href="index.html"> Clickbait Classification</a>
-      </h2>
+      <div class="container">
+        <ul class ="nav navbar-nav mx-auto">
+         <li class="nav-item">
+            <h1 class="Website-Title"> Clickbait Classification </a> </h1>
+         </li>
+        </ul>
+      </div>
     </nav>
+
     <!-- Form Elements -->
     <div class="container form-blocks">
-      <form action="{{url_for('predict')}}" method="POST">
-        <div class="form-group">
-          <label for="inputFormControl"> Enter the Text </label>
-          <textarea name="message" class="form-control textArea" id="inputFormControl" rows="3">
-          </textarea>
+      <div class ="row">
+        <div class = "col-sm-12 col-md-12 col-lg-12">
+          <form action="{{url_for('predict')}}" method="POST">
+            <div class="form-group">
+              <label for="inputFormControl"> Enter the Text </label>
+              <textarea name="message" class="form-control textArea" id="inputFormControl" rows="3">
+              </textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </div>
+      </div>
+    </div>  
+    <!-- Result Data -->
     <div class="container result-blocks">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-sm-12 col-md-12 col-lg-12">
           <div class="card">
             <div class="card-body">Prediction Result:&nbsp;{{prediction_text}}</div>
           </div>
         </div>
+      </div>
     </div>
+
   </body>
 </html>
